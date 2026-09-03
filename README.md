@@ -1,23 +1,23 @@
-# 🚀 AI-Powered Interview Accelerator
+#  AI-Powered Interview Accelerator
 
 An intelligent, full-stack interview preparation platform inspired by [StudentCredibility.com](https://studentcredibility.com). It bridges the gap for candidates who are **"under-evidenced, not underqualified"** by analyzing job descriptions against resumes, identifying skill gaps, conducting realistic 3-level adaptive voice & video interviews, and delivering comprehensive, actionable feedback.
 
 ---
 
-## ✨ Features
+##  Features
 
-- **📊 Job Description Analysis**: Extracts core responsibilities, required & preferred skills, technical competencies, behavioural expectations, and crucial keywords.
-- **🎯 Candidate Profile & Fit Scoring**: Cross-references resume evidence against the JD to calculate a Job Fit score and break down matches into Strong, Partial, and Missing skills.
-- **🎤 3-Level Adaptive Interview**:
+-  Job Description Analysis**: Extracts core responsibilities, required & preferred skills, technical competencies, behavioural expectations, and crucial keywords.
+-  Candidate Profile & Fit Scoring**: Cross-references resume evidence against the JD to calculate a Job Fit score and break down matches into Strong, Partial, and Missing skills.
+-  3-Level Adaptive Interview**:
   1. **Level 1 — Screening**: Verifies resume background, motivation, role alignment, and core understanding.
   2. **Level 2 — Competency**: Tests technical depth, problem-solving, and practical application with STAR framework behavioral inquiries.
   3. **Level 3 — Deep-Dive**: Probes weak or ambiguous answers, challenges claims, and presents realistic scenarios with progressive difficulty.
-- **🗣️ Browser-Native Voice & Video**:
+-  Browser-Native Voice & Video**:
   - Speech-to-Text with live transcription (Web Speech API).
   - Natural Text-to-Speech question delivery.
   - Video preview with camera feed.
   - Metrics tracking: response time, words per minute (WPM), and filler word detection.
-- **📋 Actionable Performance Evaluation**:
+-  Actionable Performance Evaluation**:
   - Detailed score breakdown across 7 competencies (Role Fit, Technical Knowledge, Problem Solving, Communication, Confidence, Depth, Behavioural Fit).
   - Interactive competency radar/spider chart.
   - Question-by-question critique (What Was Good, Could Be Better, Ideal Direction).
@@ -26,7 +26,7 @@ An intelligent, full-stack interview preparation platform inspired by [StudentCr
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend**: Python 3 + [FastAPI](https://fastapi.tiangolo.com/) + Uvicorn
 - **LLM Engine**: [Google Gemini API](https://aistudio.google.com/apikey) (`gemini-2.0-flash`)
@@ -36,7 +36,7 @@ An intelligent, full-stack interview preparation platform inspired by [StudentCr
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 ```bash
@@ -63,7 +63,7 @@ Visit [http://localhost:8000](http://localhost:8000) (Google Chrome or Microsoft
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 assessment 3/
