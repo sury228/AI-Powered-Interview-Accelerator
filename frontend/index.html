@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Powered Interview Accelerator — Personalised interview preparation with AI analysis, adaptive 3-level interviews, and detailed performance reports.">
+    <title>Interview Accelerator — AI-Powered Interview Prep</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/frontend/css/design-system.css">
+    <link rel="stylesheet" href="/frontend/css/components.css">
+    <link rel="stylesheet" href="/frontend/css/animations.css">
+    <link rel="stylesheet" href="/frontend/css/pages.css">
+
+    <!-- Favicon (emoji-based SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body class="animated-gradient-bg">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar"></nav>
+
+    <!-- Main App Container -->
+    <main id="app"></main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text" id="loading-text">Processing...</div>
+        <div class="loading-subtext" id="loading-subtext"></div>
+    </div>
+
+    <!-- JavaScript Modules -->
+    <script src="/frontend/js/utils/helpers.js"></script>
+    <script src="/frontend/js/utils/speech.js"></script>
+    <script src="/frontend/js/utils/video.js"></script>
+    <script src="/frontend/js/api.js"></script>
+    <script src="/frontend/js/components/navbar.js"></script>
+    <script src="/frontend/js/components/file-upload.js"></script>
+    <script src="/frontend/js/components/gauge.js"></script>
+    <script src="/frontend/js/components/radar-chart.js"></script>
+    <script src="/frontend/js/components/voice-controls.js"></script>
+    <script src="/frontend/js/pages/landing.js"></script>
+    <script src="/frontend/js/pages/input.js"></script>
+    <script src="/frontend/js/pages/role-analysis.js"></script>
+    <script src="/frontend/js/pages/candidate-analysis.js"></script>
+    <script src="/frontend/js/pages/interview.js"></script>
+    <script src="/frontend/js/pages/results.js"></script>
+    <script src="/frontend/js/app.js"></script>
+</body>
+</html>
