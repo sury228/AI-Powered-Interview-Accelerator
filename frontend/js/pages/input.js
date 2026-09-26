@@ -23,7 +23,7 @@ const InputPage = {
                     <div id="api-key-section" class="api-key-section fade-in-up">
                         <div class="card" style="margin-bottom: var(--space-6)">
                             <div class="form-group">
-                                <label class="form-label">🔑 Gemini API Key</label>
+                                <label class="form-label">Gemini API Key</label>
                                 <p style="font-size: var(--text-sm); color: var(--text-tertiary); margin-bottom: var(--space-3)">
                                     Get a free key from <a href="https://aistudio.google.com/apikey" target="_blank">Google AI Studio</a>. 
                                     Stored locally, never shared.
@@ -37,7 +37,7 @@ const InputPage = {
                                     </button>
                                 </div>
                                 <div id="api-key-status" class="hidden" style="margin-top: var(--space-2)">
-                                    <span class="badge badge-success">✓ API Key configured</span>
+                                    <span class="badge badge-success">API Key configured</span>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,6 @@ const InputPage = {
                         <!-- JD Panel -->
                         <div class="input-panel fade-in-up">
                             <div class="input-panel-header">
-                                <span class="input-panel-icon">📄</span>
                                 <span class="input-panel-title">Job Description</span>
                             </div>
                             <div class="input-method-tabs">
@@ -73,7 +72,6 @@ const InputPage = {
                         <!-- Resume Panel -->
                         <div class="input-panel fade-in-up">
                             <div class="input-panel-header">
-                                <span class="input-panel-icon">👤</span>
                                 <span class="input-panel-title">Your Resume</span>
                             </div>
                             <div class="input-method-tabs">
@@ -99,7 +97,7 @@ const InputPage = {
                     <!-- Analyse button -->
                     <div class="input-actions fade-in-up" style="margin-top: var(--space-6)">
                         <button class="btn btn-primary btn-lg" onclick="InputPage.analyse()" id="analyse-btn">
-                            ⚡ Analyse with AI
+                            Analyse with AI →
                         </button>
                     </div>
                 </div>

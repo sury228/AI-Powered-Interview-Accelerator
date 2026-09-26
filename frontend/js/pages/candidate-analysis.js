@@ -22,7 +22,7 @@ const CandidateAnalysisPage = {
                 <div class="analysis-page container">
                     <!-- Header -->
                     <div class="analysis-header fade-in-up">
-                        <div class="badge badge-primary" style="margin-bottom: var(--space-3)">👤 Candidate Analysis</div>
+                        <div class="badge badge-primary" style="margin-bottom: var(--space-3)">Candidate Analysis</div>
                         <h2>Your Profile vs <span class="text-gradient">${Helpers.escapeHtml(jd.role_title)}</span></h2>
                     </div>
 
@@ -40,8 +40,8 @@ const CandidateAnalysisPage = {
                     <!-- Match Breakdown -->
                     <div class="match-breakdown fade-in-up">
                         <div class="match-column">
-                            <div class="match-column-title">
-                                <span style="color: var(--color-success)">🟢</span> Strong Match (${strong.length})
+                            <div class="match-column-title" style="color: var(--color-success)">
+                                Strong Match (${strong.length})
                             </div>
                             <div class="match-items">
                                 ${strong.map(m => `
@@ -53,8 +53,8 @@ const CandidateAnalysisPage = {
                             </div>
                         </div>
                         <div class="match-column">
-                            <div class="match-column-title">
-                                <span style="color: var(--color-warning)">🟡</span> Partial Match (${partial.length})
+                            <div class="match-column-title" style="color: var(--color-warning)">
+                                Partial Match (${partial.length})
                             </div>
                             <div class="match-items">
                                 ${partial.map(m => `
@@ -66,8 +66,8 @@ const CandidateAnalysisPage = {
                             </div>
                         </div>
                         <div class="match-column">
-                            <div class="match-column-title">
-                                <span style="color: var(--color-error)">🔴</span> Missing (${missing.length})
+                            <div class="match-column-title" style="color: var(--color-error)">
+                                Missing (${missing.length})
                             </div>
                             <div class="match-items">
                                 ${missing.map(m => `
@@ -83,22 +83,22 @@ const CandidateAnalysisPage = {
                     <!-- Strengths & Weaknesses -->
                     <div class="strengths-weaknesses">
                         <div class="analysis-section fade-in-up">
-                            <h3 class="analysis-section-title" style="color: var(--color-success)">💪 Strengths</h3>
+                            <h3 class="analysis-section-title" style="color: var(--color-success)">Strengths</h3>
                             <div class="sw-list">
                                 ${(ca.strengths || []).map(s => `
                                     <div class="sw-item card card-success">
-                                        <span class="sw-item-icon">✓</span>
+                                        <span class="sw-item-icon" style="color: var(--color-success)">•</span>
                                         <span>${Helpers.escapeHtml(s)}</span>
                                     </div>
                                 `).join('')}
                             </div>
                         </div>
                         <div class="analysis-section fade-in-up">
-                            <h3 class="analysis-section-title" style="color: var(--color-warning)">⚠️ Areas to Improve</h3>
+                            <h3 class="analysis-section-title" style="color: var(--color-warning)">Areas to Improve</h3>
                             <div class="sw-list">
                                 ${(ca.weaknesses || []).map(w => `
                                     <div class="sw-item card card-warning">
-                                        <span class="sw-item-icon">!</span>
+                                        <span class="sw-item-icon" style="color: var(--color-warning)">•</span>
                                         <span>${Helpers.escapeHtml(w)}</span>
                                     </div>
                                 `).join('')}
@@ -109,12 +109,12 @@ const CandidateAnalysisPage = {
                     <!-- Claims to probe -->
                     ${ca.claims_to_probe && ca.claims_to_probe.length ? `
                     <div class="analysis-section fade-in-up">
-                        <h3 class="analysis-section-title">🔍 Items the AI Will Probe</h3>
+                        <h3 class="analysis-section-title">Items the AI Will Probe</h3>
                         <div class="card card-gradient">
                             <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3)">
                                 ${ca.claims_to_probe.map(c => `
                                     <li style="display: flex; align-items: flex-start; gap: var(--space-3); color: var(--text-secondary); font-size: var(--text-sm)">
-                                        <span style="color: var(--accent-violet)">⬥</span>
+                                        <span style="color: var(--accent-violet)">•</span>
                                         ${Helpers.escapeHtml(c)}
                                     </li>
                                 `).join('')}
@@ -126,12 +126,12 @@ const CandidateAnalysisPage = {
                     <!-- Resume improvement suggestions -->
                     ${ca.resume_improvement_suggestions && ca.resume_improvement_suggestions.length ? `
                     <div class="analysis-section fade-in-up">
-                        <h3 class="analysis-section-title">📝 Resume Improvement Suggestions</h3>
+                        <h3 class="analysis-section-title">Resume Improvement Suggestions</h3>
                         <div class="card">
                             <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3)">
                                 ${ca.resume_improvement_suggestions.map(s => `
                                     <li style="display: flex; align-items: flex-start; gap: var(--space-3); color: var(--text-secondary); font-size: var(--text-sm)">
-                                        <span style="color: var(--accent-cyan)">💡</span>
+                                        <span style="color: var(--accent-cyan)">•</span>
                                         ${Helpers.escapeHtml(s)}
                                     </li>
                                 `).join('')}
@@ -147,7 +147,7 @@ const CandidateAnalysisPage = {
                             The AI will conduct a personalised 3-level interview based on your profile
                         </p>
                         <button class="btn btn-primary btn-lg glow-pulse" onclick="CandidateAnalysisPage.startInterview()" id="start-interview-btn">
-                            🎤 Start AI Interview
+                            Start AI Interview →
                         </button>
                     </div>
                 </div>

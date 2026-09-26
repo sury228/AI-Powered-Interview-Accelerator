@@ -184,6 +184,7 @@ async def serve_spa(full_path: str):
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n🚀 AI Interview Accelerator starting...")
+    print("\n>> AI Interview Accelerator starting...")
     print("   Open http://localhost:8000 in your browser\n")
     uvicorn.run(app, host="0.0.0.0", port=8000)
+

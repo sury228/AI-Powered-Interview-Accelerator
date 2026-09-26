@@ -10,7 +10,6 @@ const LandingPage = {
                     <!-- Hero -->
                     <section class="landing-hero">
                         <div class="landing-hero-badge fade-in-up">
-                            <span>⚡</span>
                             <span>Powered by AI</span>
                         </div>
                         <h1 class="landing-title fade-in-up">
@@ -23,7 +22,7 @@ const LandingPage = {
                         </p>
                         <div class="landing-cta-group fade-in-up">
                             <button class="btn btn-primary btn-lg" onclick="App.navigate('input')" id="cta-get-started">
-                                🚀 Get Started Free
+                                Get Started Free →
                             </button>
                             <button class="btn btn-secondary btn-lg" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
                                 Learn More ↓
@@ -63,32 +62,26 @@ const LandingPage = {
     renderFeatures() {
         const features = [
             {
-                icon: '📊',
                 title: 'JD Analysis',
                 desc: 'AI breaks down any job description into skills, competencies, responsibilities, and keywords you need to know.'
             },
             {
-                icon: '🎯',
                 title: 'Resume Fit Score',
                 desc: 'See exactly how your profile matches: strong, partial, and missing skills with a calculated fit percentage.'
             },
             {
-                icon: '🎤',
                 title: '3-Level AI Interview',
                 desc: 'Screening → Competency → Deep-Dive. Each question adapts based on your previous answers.'
             },
             {
-                icon: '🗣️',
                 title: 'Voice & Video',
                 desc: 'Speak your answers naturally with real-time transcription. Practice with camera to build confidence.'
             },
             {
-                icon: '🧠',
                 title: 'Adaptive Intelligence',
                 desc: 'The AI remembers every answer and probes weak areas deeper while increasing complexity on strengths.'
             },
             {
-                icon: '📋',
                 title: 'Detailed Report',
                 desc: 'Get scores across 7 competencies, question-by-question feedback, and a prioritised preparation plan.'
             }
@@ -96,7 +89,6 @@ const LandingPage = {
 
         return features.map(f => `
             <div class="card card-hover feature-card fade-in-up">
-                <div class="feature-icon">${f.icon}</div>
                 <h4 class="feature-title">${f.title}</h4>
                 <p class="feature-desc">${f.desc}</p>
             </div>

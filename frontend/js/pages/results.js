@@ -17,7 +17,7 @@ const ResultsPage = {
                 <div class="results-page container">
                     <!-- Header -->
                     <div class="results-header fade-in-up">
-                        <div class="badge badge-primary" style="margin-bottom: var(--space-3)">📋 Performance Report</div>
+                        <div class="badge badge-primary" style="margin-bottom: var(--space-3)">Performance Report</div>
                         <h1>Your Interview <span class="text-gradient">Results</span></h1>
                         ${report.summary ? `<p style="margin-top: var(--space-4); max-width: 600px; margin-left: auto; margin-right: auto">${Helpers.escapeHtml(report.summary)}</p>` : ''}
                     </div>
@@ -33,7 +33,7 @@ const ResultsPage = {
                                 </div>
                             </div>
                             <div class="readiness-badge ${Helpers.getReadinessClass(report.readiness_level)}" style="margin-top: var(--space-4)">
-                                ${Helpers.getReadinessEmoji(report.readiness_level)} ${report.readiness_level}
+                                ${report.readiness_level}
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@ const ResultsPage = {
                     <!-- Speaking Metrics -->
                     ${report.speaking_metrics ? `
                     <div class="analysis-section fade-in-up">
-                        <h3 class="analysis-section-title">🗣️ Speaking Metrics</h3>
+                        <h3 class="analysis-section-title">Speaking Metrics</h3>
                         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4)">
                             <div class="card text-center">
                                 <div style="font-size: var(--text-3xl); font-weight: 700; font-family: var(--font-display); color: var(--text-primary)">${report.speaking_metrics.average_wpm || 0}</div>
@@ -66,7 +66,7 @@ const ResultsPage = {
 
                     <!-- Competency Scores -->
                     <div class="analysis-section fade-in-up">
-                        <h3 class="analysis-section-title">📊 Competency Scores</h3>
+                        <h3 class="analysis-section-title">Competency Scores</h3>
                         <div class="competency-scores-grid">
                             ${(report.competency_scores || []).map(cs => `
                                 <div class="card competency-card">
@@ -85,7 +85,7 @@ const ResultsPage = {
 
                     <!-- Question-Level Feedback -->
                     <div class="analysis-section fade-in-up">
-                        <h3 class="analysis-section-title">💬 Question-by-Question Feedback</h3>
+                        <h3 class="analysis-section-title">Question-by-Question Feedback</h3>
                         ${(report.question_feedback || []).map((qf, i) => {
                             const assessColors = { 'Good': 'var(--color-success)', 'Average': 'var(--color-warning)', 'Weak': 'var(--color-error)' };
                             const assessColor = assessColors[qf.assessment] || 'var(--text-tertiary)';
@@ -115,15 +115,15 @@ const ResultsPage = {
                                             </div>
                                             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-4)">
                                                 <div class="card card-success" style="padding: var(--space-3)">
-                                                    <p style="font-size: var(--text-xs); font-weight: 600; color: var(--color-success); margin-bottom: var(--space-2)">✓ What Was Good</p>
+                                                    <p style="font-size: var(--text-xs); font-weight: 600; color: var(--color-success); margin-bottom: var(--space-2)">What Was Good</p>
                                                     <p style="font-size: var(--text-xs); color: var(--text-secondary)">${Helpers.escapeHtml(qf.what_was_good || 'N/A')}</p>
                                                 </div>
                                                 <div class="card card-warning" style="padding: var(--space-3)">
-                                                    <p style="font-size: var(--text-xs); font-weight: 600; color: var(--color-warning); margin-bottom: var(--space-2)">⬆ Could Be Better</p>
+                                                    <p style="font-size: var(--text-xs); font-weight: 600; color: var(--color-warning); margin-bottom: var(--space-2)">Could Be Better</p>
                                                     <p style="font-size: var(--text-xs); color: var(--text-secondary)">${Helpers.escapeHtml(qf.what_could_be_better || 'N/A')}</p>
                                                 </div>
                                                 <div class="card card-gradient" style="padding: var(--space-3)">
-                                                    <p style="font-size: var(--text-xs); font-weight: 600; color: var(--accent-indigo); margin-bottom: var(--space-2)">🎯 Ideal Direction</p>
+                                                    <p style="font-size: var(--text-xs); font-weight: 600; color: var(--accent-indigo); margin-bottom: var(--space-2)">Ideal Direction</p>
                                                     <p style="font-size: var(--text-xs); color: var(--text-secondary)">${Helpers.escapeHtml(qf.ideal_direction || 'N/A')}</p>
                                                 </div>
                                             </div>
@@ -137,22 +137,22 @@ const ResultsPage = {
                     <!-- Strengths & Weaknesses -->
                     <div class="strengths-weaknesses fade-in-up">
                         <div class="analysis-section">
-                            <h3 class="analysis-section-title" style="color: var(--color-success)">💪 Strengths</h3>
+                            <h3 class="analysis-section-title" style="color: var(--color-success)">Strengths</h3>
                             <div class="sw-list">
                                 ${(report.strengths || []).map(s => `
                                     <div class="sw-item card card-success">
-                                        <span class="sw-item-icon">✓</span>
+                                        <span class="sw-item-icon" style="color: var(--color-success)">•</span>
                                         <span>${Helpers.escapeHtml(s)}</span>
                                     </div>
                                 `).join('')}
                             </div>
                         </div>
                         <div class="analysis-section">
-                            <h3 class="analysis-section-title" style="color: var(--color-warning)">⚠️ Weaknesses</h3>
+                            <h3 class="analysis-section-title" style="color: var(--color-warning)">Weaknesses</h3>
                             <div class="sw-list">
                                 ${(report.weaknesses || []).map(w => `
                                     <div class="sw-item card card-warning">
-                                        <span class="sw-item-icon">!</span>
+                                        <span class="sw-item-icon" style="color: var(--color-warning)">•</span>
                                         <span>${Helpers.escapeHtml(w)}</span>
                                     </div>
                                 `).join('')}
@@ -163,7 +163,7 @@ const ResultsPage = {
                     <!-- Preparation Gaps -->
                     ${report.preparation_gaps && report.preparation_gaps.length ? `
                     <div class="analysis-section fade-in-up">
-                        <h3 class="analysis-section-title">📚 Preparation Plan</h3>
+                        <h3 class="analysis-section-title">Preparation Plan</h3>
                         <div class="prep-gaps">
                             ${report.preparation_gaps.map(pg => `
                                 <div class="card prep-gap-card">
@@ -186,10 +186,10 @@ const ResultsPage = {
                     <!-- Actions -->
                     <div class="results-actions fade-in-up">
                         <button class="btn btn-primary btn-lg" onclick="window.print()" id="download-report-btn">
-                            📥 Download Report
+                            Download Report
                         </button>
                         <button class="btn btn-secondary btn-lg" onclick="App.navigate('input')" id="retry-btn">
-                            🔄 Try Another
+                            Try Another
                         </button>
                     </div>
                 </div>

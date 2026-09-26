@@ -65,8 +65,8 @@ const InterviewPage = {
                             Send →
                         </button>
                         <button class="camera-btn" onclick="InterviewPage.toggleCamera()" id="camera-toggle-btn"
-                                data-tooltip="Toggle camera">
-                            📹
+                                data-tooltip="Toggle camera" aria-label="Toggle camera">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
                         </button>
                         <button class="btn btn-ghost btn-sm" onclick="InterviewPage.endInterview()" 
                                 style="color: var(--color-error)" id="end-interview-btn">
@@ -141,7 +141,7 @@ const InterviewPage = {
         msgDiv.className = `chat-message chat-message-${role}`;
         if (animate) msgDiv.style.animation = 'fadeInUp 0.4s ease-out';
 
-        const label = role === 'ai' ? '🤖 AI Interviewer' : '👤 You';
+        const label = role === 'ai' ? 'AI Interviewer' : 'You';
         msgDiv.innerHTML = `
             <div class="chat-message-label">${label}</div>
             <div>${Helpers.escapeHtml(text)}</div>
@@ -159,7 +159,7 @@ const InterviewPage = {
         div.className = 'chat-message chat-message-ai';
         div.id = 'typing-indicator';
         div.innerHTML = `
-            <div class="chat-message-label">🤖 AI Interviewer</div>
+            <div class="chat-message-label">AI Interviewer</div>
             <div class="typing-indicator">
                 <div class="typing-dot"></div>
                 <div class="typing-dot"></div>

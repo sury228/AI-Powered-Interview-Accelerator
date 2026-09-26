@@ -4,12 +4,12 @@
 
 const Navbar = {
     steps: [
-        { id: 'landing', label: 'Home', icon: '🏠' },
-        { id: 'input', label: 'Input', icon: '📝' },
-        { id: 'role-analysis', label: 'Role', icon: '📊' },
-        { id: 'candidate-analysis', label: 'Candidate', icon: '👤' },
-        { id: 'interview', label: 'Interview', icon: '🎤' },
-        { id: 'results', label: 'Results', icon: '📋' },
+        { id: 'landing', label: 'Home' },
+        { id: 'input', label: 'Input' },
+        { id: 'role-analysis', label: 'Role' },
+        { id: 'candidate-analysis', label: 'Candidate' },
+        { id: 'interview', label: 'Interview' },
+        { id: 'results', label: 'Results' },
     ],
 
     render(currentPage) {
@@ -19,7 +19,6 @@ const Navbar = {
         navbar.innerHTML = `
             <div class="navbar-inner">
                 <div class="navbar-brand" onclick="App.navigate('landing')">
-                    <div class="navbar-brand-icon">🚀</div>
                     <span>Interview <span class="text-gradient">Accelerator</span></span>
                 </div>
                 <div class="navbar-steps">

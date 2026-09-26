@@ -129,13 +129,7 @@ const Helpers = {
      * Get readiness emoji
      */
     getReadinessEmoji(level) {
-        const map = {
-            'Not Ready': '🔴',
-            'Needs Preparation': '🟠',
-            'Interview Ready': '🟡',
-            'Strong Candidate': '🟢'
-        };
-        return map[level] || '⚪';
+        return '';
     },
 
     /**

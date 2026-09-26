@@ -15,11 +15,10 @@ const FileUpload = {
                  ondragleave="FileUpload.handleDragLeave(event, '${id}')"
                  ondrop="FileUpload.handleDrop(event, '${id}')"
                  onclick="document.getElementById('${id}-input').click()">
-                <div class="upload-zone-icon">📄</div>
-                <div class="upload-zone-text">
+                <div class="upload-zone-text" style="font-weight: 600; font-size: 1rem; margin-bottom: 4px">
                     Drag & drop your file here or <span>browse</span>
                 </div>
-                <div class="upload-zone-text" style="margin-top: 4px; font-size: 0.75rem; color: var(--text-muted)">
+                <div class="upload-zone-text" style="font-size: 0.75rem; color: var(--text-muted)">
                     Supports PDF, DOCX, TXT
                 </div>
                 <input type="file" id="${id}-input" accept=".pdf,.docx,.doc,.txt" style="display: none"
@@ -68,7 +67,7 @@ const FileUpload = {
             const statusEl = document.getElementById(`${id}-status`);
             const filenameEl = document.getElementById(`${id}-filename`);
             statusEl.classList.remove('hidden');
-            filenameEl.textContent = `✓ ${file.name}`;
+            filenameEl.textContent = file.name;
 
             // Store extracted text
             if (this.onFileProcessed) {
